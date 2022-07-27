@@ -1,10 +1,8 @@
-img.animated:hover {
-  transform: scale(1.5);
-  //animation: star-rotation .75s ease infinite;
-  //animation-iteration-count: 1;
+img.animated {
+  animation: star-rotation .75s ease-in-out infinite  ;
 }
 img#star {
-  transition: transform .25s;
+  transition:  .25s linear;
 
   margin-bottom: 50px;
   width: 50px;
