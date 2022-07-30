@@ -1,6 +1,7 @@
-$kuromi-color: #4b1aa1;
+@use '../../variables' as v;
+
 header {
-  background: $kuromi-color;
+  background: v.$kuromi-color;
   height: 125px;
 
 

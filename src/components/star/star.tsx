@@ -16,7 +16,7 @@ const Star = () => {
 
     return (
         <img src={starPic} alt="star" onMouseEnter={()=> {
-            startStarAnimation()
+            if (!isAnimated) startStarAnimation()
         }} className={isAnimated} id='star'/>
     );
 };

@@ -1,0 +1,5 @@
+@use '../../variables' as v;
+.footer{
+  background-color: v.$kuromi-color;
+  color: v.$bg-color;
+}
