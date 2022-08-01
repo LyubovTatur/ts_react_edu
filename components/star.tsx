@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import starPic from "../../images/star.png";
-import './star.scss'
+// @ts-ignore
+import styles from '../styles/star.module.scss'
+import Image from 'next/image';
+// @ts-ignore
+import starPic from "../public/images/star.png";
 
 const Star = () => {
     const starAnimationDuration = 750;
@@ -15,9 +18,9 @@ const Star = () => {
 
 
     return (
-        <img src={starPic} alt="star" onMouseEnter={()=> {
+        <Image  src={starPic} alt="star" width={50} height={50} onMouseEnter={()=> {
             if (!isAnimated) startStarAnimation()
-        }} className={isAnimated} id='star'/>
+        }} className={isAnimated?styles.animated:''} id='star'/>
     );
 };
 

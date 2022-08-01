@@ -1,11 +1,13 @@
 import React from 'react';
-import './footer.scss'
-import Star from "../star/star";
-import angryEatingkuromi from '../../images/angry_eating_kuromi.gif'
+// @ts-ignore
+import styles from '../styles/footer.module.scss'
+import Star from "./star";
+// @ts-ignore
+import angryEatingkuromi from '../public/images/angry_eating_kuromi.gif';
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className={styles.footer}>
             {(Array.from({length:18})).map((_,i)=>{
                 return(
                     <Star key={i}/>

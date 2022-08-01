@@ -1,14 +1,16 @@
 import React from 'react';
 
-import Star from '../star/star';
-import Kuromi from '../kuromi/kuromi';
-import './header.scss'
+import Star from './star';
+import Kuromi from './kuromi';
+// @ts-ignore
+import styles from '../styles/header.module.scss';
+
 const Header = () => {
 
     return (
-        <header>
+        <header className={styles.header}>
             <Kuromi/>
-            <div className="stars">
+            <div className={styles.stars}>
                 {(Array.from({length: 5})).map((_, i)=>(
                     <Star key={i}/>
                     )

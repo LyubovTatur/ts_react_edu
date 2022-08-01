@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use 'variables.module' as v;
 
 body {
   margin: 0;
@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:  v.$bg-color;
+  background-color:  #FFECB8FF;
 }
 
 code {
