@@ -1,0 +1,20 @@
+.track_item{
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-block:5px;
+  align-items: center;
+  border:3px solid #4b1aa1;
+  padding-inline: 10px;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0px 0px #4b1aa1;
+
+  .track_image{
+    border:1px solid #4b1aa1;
+    border-radius: 30px;
+    margin-left: 20px;
+  }
+  .track_title{
+    margin-left: 20px;
+  }
+}

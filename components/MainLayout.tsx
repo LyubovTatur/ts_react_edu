@@ -13,18 +13,17 @@ const MainLayout: React.FC = ({children}) => {
         <>
             <div className={stylesApp.App}>
                 <Header/>
-
                 <div className={styles.content}>
-                    <div className="col_1 col">
-                        <Navbar/>
-                    </div>
-                    <div className="col_2 col">
-                        {children}
-                    </div>
-
+                    {children}
                 </div>
                 <Footer/>
             </div>
+            <style>
+                {`body{
+                padding:0;
+                margin:0;
+            }`}
+            </style>
         </>
     );
 };

@@ -1,16 +1,30 @@
 .player {
   height: 60px;
   position: fixed;
+  padding-inline: 10px;
   top: 75px;
   width: 60%;
   display: flex;
   margin-inline: auto;
-  justify-content:  space-between;
   align-items: center;
   left: 0;
   right: 0;
   background: #ffecb8; //#FFECB8FF
   border: 3px solid #4b1aa1;
   border-radius: 30px;
+  .track_image{
+    border:1px solid #4b1aa1;
+    border-radius: 30px;
+    margin-left: 20px;
+  }
+  .track_line{
+    display: flex;
+    flex-direction: column;
 
+    .track_title{
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+    }
+  }
 }

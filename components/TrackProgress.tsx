@@ -5,17 +5,18 @@ import styles from '../styles/trackProgress.module.scss'
 interface TrackProgressProps {
     left: number;
     right: number;
+    width:number|null;
     // @ts-ignore
     onChange: (e) => void;
 }
 
-const TrackProgress: React.FC<TrackProgressProps> = ({left, right, onChange}) => {
+const TrackProgress: React.FC<TrackProgressProps> = ({left, right, onChange, width}) => {
     return (
-        <>
-            <input className={styles.input} id="range" type="range" onChange={onChange} min={0} max={right}
+        <div className={styles.track_progress}>
+            <input style={{width:width+'%'}} className={styles.input} id="range" type="range" onChange={onChange} min={0} max={right}
                    value={left}/>
-            <div>{left} / {right}</div>
-        </>
+            <div style={{fontSize:13}}>{left} / {right}</div>
+        </div>
     );
 };
 

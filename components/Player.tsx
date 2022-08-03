@@ -7,6 +7,7 @@ import TrackProgress from "./TrackProgress";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 import Button from "./button";
+import PlayPauseButton from "./playPauseButton";
 
 let audio: HTMLAudioElement;
 
@@ -69,19 +70,24 @@ const Player = () => {
 
     return (
         <div className={styles.player}>
-            <h3>
-                {String(active)}
-            </h3>
-            <h1>{active?.title}</h1>
-            <h2>{active?.artist}</h2>
-            <Button onClick={play}>
-                <img width={15} height={15}
-                     src={paused ?
-                         "https://icon-library.com/images/white-play-icon-png/white-play-icon-png-27.jpg"
-                         : 'https://smallimg.pngkey.com/png/small/5-51822_music-pause-button-pair-of-lines-comments-music.png'}/>
-            </Button>
-            <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime}/>
-            <TrackProgress left={volume} right={100} onChange={changeVolume}/>
+
+            <PlayPauseButton play={play}/>
+            <img className={styles.track_image} width={45} height={45} src={active?.picture}/>
+            <div className={styles.track_line} style={{width: '68%', marginLeft: 10}}>
+                <div className={styles.track_title}>
+                    <b>{active?.title || 'no track have choosen'}</b>
+                    <i>{active?.artist}</i>
+                </div>
+                <TrackProgress width={75} left={currentTime} right={duration} onChange={changeCurrentTime}/>
+            </div>
+
+            <div className={styles.track_line}>
+                <div className={styles.track_title}>
+                    <i>volume</i>
+                </div>
+                <TrackProgress width={60} left={volume} right={100} onChange={changeVolume}/>
+            </div>
+
         </div>
     );
 };

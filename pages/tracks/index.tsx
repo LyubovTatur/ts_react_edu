@@ -6,6 +6,7 @@ import {ITrack} from "../../types/track";
 import TrackList from "../../components/TrackList.module";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useActions} from "../../hooks/useActions";
+import Button from "../../components/button";
 
 const Index = () => {
     const router = useRouter()
@@ -73,9 +74,8 @@ const Index = () => {
     ]
     return (
         <MainLayout>
-            <h1>Track List</h1>
+            <Button  onClick={() => router.push('/tracks/create')}>Upload track</Button>
             <TrackList tracks={tracks}/>
-            <button onClick={() => router.push('/tracks/create')}>Upload track</button>
         </MainLayout>
     );
 };

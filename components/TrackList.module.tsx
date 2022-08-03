@@ -10,7 +10,7 @@ interface TrackListProps{
 
 const TrackList:React.FC<TrackListProps> = ({tracks}) => {
     return (
-        <ul>
+        <ul style={{display:'flex', flexDirection:'column', padding:0}} >
             {tracks.map(track=>(
                 <TrackItem track={track}/>
             ))}
