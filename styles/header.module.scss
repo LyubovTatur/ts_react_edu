@@ -1,14 +1,19 @@
 
 .header {
+  position: fixed;
+  top:0px;
+  display:flex;
+  width: 100%;
   background: #4B1AA1FF;
-  height: 125px;
-
+  height: 100px;
+  padding-inline: 10%;
 
 
   .stars {
     display: inline;
-
-    margin-left: 30%;
+    position: absolute;
+    top:75px;
+    left: 50%;
 
 
 

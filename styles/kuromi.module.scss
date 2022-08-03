@@ -1,8 +1,6 @@
 .kuromi {
-  display: inline;
-  margin-left: 10%;
-  height: 200px;
-  width: 200px;
-  border-radius: 2px;
-  border: black;
+  position: absolute;
+  display: none;
+  top:-20px;
+  left: 5%;
 }

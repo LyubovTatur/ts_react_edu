@@ -1,18 +1,21 @@
 // @ts-ignore
 import React from 'react';
+import styles from '../styles/trackProgress.module.scss'
 
-interface TrackProgressProps{
-    left:number;
+interface TrackProgressProps {
+    left: number;
     right: number;
-    onChange:(e)=>void;
+    // @ts-ignore
+    onChange: (e) => void;
 }
 
-const TrackProgress: React.FC<TrackProgressProps> = ({left,right,onChange}) => {
+const TrackProgress: React.FC<TrackProgressProps> = ({left, right, onChange}) => {
     return (
-        <div >
-            <input type="range" onChange={onChange} min={0} max={right} value={left}/>
+        <>
+            <input className={styles.input} id="range" type="range" onChange={onChange} min={0} max={right}
+                   value={left}/>
             <div>{left} / {right}</div>
-        </div>
+        </>
     );
 };
 

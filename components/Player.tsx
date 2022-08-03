@@ -6,8 +6,9 @@ import styles from '../styles/player.module.scss';
 import TrackProgress from "./TrackProgress";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
+import Button from "./button";
 
-let audio;
+let audio: HTMLAudioElement;
 
 const Player = () => {
     // const track = {
@@ -73,7 +74,12 @@ const Player = () => {
             </h3>
             <h1>{active?.title}</h1>
             <h2>{active?.artist}</h2>
-            <button onClick={play}>{paused ? 'play' : 'pause'}</button>
+            <Button onClick={play}>
+                <img width={15} height={15}
+                     src={paused ?
+                         "https://icon-library.com/images/white-play-icon-png/white-play-icon-png-27.jpg"
+                         : 'https://smallimg.pngkey.com/png/small/5-51822_music-pause-button-pair-of-lines-comments-music.png'}/>
+            </Button>
             <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime}/>
             <TrackProgress left={volume} right={100} onChange={changeVolume}/>
         </div>

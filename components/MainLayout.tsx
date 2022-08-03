@@ -21,7 +21,6 @@ const MainLayout: React.FC = ({children}) => {
                     <div className="col_2 col">
                         {children}
                     </div>
-                    <div className="col_3 col">3</div>
 
                 </div>
                 <Footer/>

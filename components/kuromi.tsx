@@ -17,7 +17,7 @@ const Kuromi = () => {
 
     return (
 
-        <Image className={styles.kuromi} width={200} height={200} src={kuromiSrc} alt="no pic"
+        <img className={styles.kuromi} width={200} height={200} src={kuromiSrc.src} alt="no pic"
                onMouseEnter={() => toggleKuromi()} onMouseLeave={() => toggleKuromi()} id='kuromi'/>
 
 

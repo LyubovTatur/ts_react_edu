@@ -1,17 +1,14 @@
 import React from 'react';
 // @ts-ignore
-import styles from '../styles/button.module.scss'
-
-const Button = () => {
+import styles from '../styles/button_2.module.scss'
+// @ts-ignore
+const Button = ({onClick, children}) => {
     return (
-        <button className={styles.Pushable} role="button">
-            <span className={styles.Shadow}></span>
-            <span className={styles.Edge}></span>
-            <span className={styles.Front}>
-                Button 82
-            </span>
+        <button onClick={onClick} className={styles.button} role="button">
+            {children}
         </button>
     );
 };
 
 export default Button;
+

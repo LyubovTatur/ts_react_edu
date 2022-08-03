@@ -10,10 +10,12 @@ import Navbar from "../components/navbar.module";
 
 const Index = () => {
     return (
-        <MainLayout>
-            main
+        <>
+            <MainLayout>
 
-        </MainLayout>
+            </MainLayout>
+
+        </>
     )
 }
 

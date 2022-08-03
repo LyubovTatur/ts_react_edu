@@ -12,12 +12,12 @@ const Header = () => {
         <header className={styles.header}>
             <Kuromi/>
             <Player/>
-            <div className={styles.stars}>
-                {(Array.from({length: 5})).map((_, i)=>(
-                    <Star key={i}/>
-                    )
-                )}
-            </div>
+            {/*<div className={styles.stars}>*/}
+            {/*    {(Array.from({length: 5})).map((_, i)=>(*/}
+            {/*        <Star key={i}/>*/}
+            {/*        )*/}
+            {/*    )}*/}
+            {/*</div>*/}
         </header>
     );
 };

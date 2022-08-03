@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600&family=Mali:wght@200;300;400;500;600&family=Patrick+Hand&display=swap');
+
 .App {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color:  #FFECB8FF;
+  font-family: 'Mali', cursive;
+  font-weight:500;
+  color: #66551CFF;
+  margin:0;
+  padding:0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFECB8FF;
 
 }
+
