@@ -25,7 +25,7 @@ const TrackPage = () => {
             <h1>{track.title}</h1>
             <ul>
                 {track.comments.map(commItem => (
-                    <li>{commItem.user} {commItem.text}</li>
+                    <li key={commItem._id}>{commItem.user} {commItem.text}</li>
                 ))}
             </ul>
             <button onClick={() => router.push('/tracks')}>Back</button>
