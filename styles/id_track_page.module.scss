@@ -1,0 +1,16 @@
+.track_info_block {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+
+  .track_image_info {
+    border-radius: 70px;
+    border: solid #4b1aa1;
+    color: #4b1aa1;
+    box-shadow: 3px 3px 0px 0px;
+  }
+  .track_info{
+    outline: #4b1aa1 solid 2px ;
+  }
+}

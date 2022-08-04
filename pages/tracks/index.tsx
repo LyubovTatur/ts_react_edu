@@ -71,10 +71,69 @@ const Index = () => {
             comments: [],
             picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
         },
+        {
+            _id: '7',
+            title: 'track 1',
+            artist: 'art 1',
+            lyrics: 'lyr 1',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
+        {
+            _id: '8',
+            title: 'track 2',
+            artist: 'art 2',
+            lyrics: 'lyr 2',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
+        {
+            _id: '9',
+            title: 'track 3',
+            artist: 'art 3',
+            lyrics: 'lyr 3',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
+        {
+            _id: '10',
+            title: 'track 4',
+            artist: 'art 4',
+            lyrics: 'lyr 4',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
+        {
+            _id: '11',
+            title: 'track 5',
+            artist: 'art 5',
+            lyrics: 'lyr 5',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
+        {
+            _id: '12',
+            title: 'track 6',
+            artist: 'art 6',
+            lyrics: 'lyr 6',
+            listens: 2,
+            audio: 'http://localhost:5000/audio/fb726993-7358-498a-91f7-eebf0dd2b11f.mp3',
+            comments: [],
+            picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
+        },
     ]
     return (
         <MainLayout>
-            <Button  onClick={() => router.push('/tracks/create')}>Upload track</Button>
             <TrackList tracks={tracks}/>
         </MainLayout>
     );

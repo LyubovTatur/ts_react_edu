@@ -6,8 +6,9 @@ import Button from "./button";
 
 const Navbar = () => {
     const menuItems = [
-        {text: 'Track list', href: '/tracks'},
-        {text: 'Album list', href: '/albums'},
+        {text: 'track list', href: '/tracks'},
+        {text: 'upload track', href: '/tracks/create'},
+        {text: 'album list', href: '/albums'},
     ]
     const router = useRouter()
     return (

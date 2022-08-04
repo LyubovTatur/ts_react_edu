@@ -5,13 +5,14 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 147px;
+  top: 160px;
   flex: auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-inline: 10%   ;
   align-items: center;
   .menu_item{
     flex: 1 1 auto  ;
-    font-size: 30px;
-    padding-inline: 30px ;
+    font-size: 25px;
+
   }
 }
