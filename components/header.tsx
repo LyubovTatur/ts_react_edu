@@ -15,7 +15,7 @@ const Header = () => {
             <Kuromi/>
             <Player/>
             <Navbar/>
-
+             
             {/*<div className={styles.stars}>*/}
             {/*    {(Array.from({length: 5})).map((_, i)=>(*/}
             {/*        <Star key={i}/>*/}

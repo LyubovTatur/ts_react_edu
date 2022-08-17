@@ -8,7 +8,11 @@ import styles from '../styles/trackItem.module.scss';
 import Button from "./button";
 import PlayPauseButton from "./playPauseButton";
 
-const TrackItem = ({track}) => {
+interface TrackItemProps{
+    track:ITrack
+}
+
+const TrackItem:React.FC<TrackItemProps> = ({track}) => {
     const router = useRouter()
     const {setTrack, playTrack, pauseTrack} = useActions()
 
@@ -20,8 +24,8 @@ const TrackItem = ({track}) => {
         <div key={track._id} onClick={() => router.push('/tracks/' + track._id)}>
             <div className={styles.track_item}>
                 <PlayPauseButton play={play}/>
-                <img className={styles.track_image} width={45} height={45} src={track.picture}/>
-                <audio src={track.audio}>mlem</audio>
+                <img className={styles.track_image} width={45} height={45} src={'http://loaclhost:5000/'+track.picture}/>
+                <audio src={'http://loaclhost:5000/'+track.audio}>mlem</audio>
                 <div className={styles.track_title}>
                     <b>{track.title} </b>
                     <i>{track.artist}</i>

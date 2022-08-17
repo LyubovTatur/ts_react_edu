@@ -8,6 +8,7 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 import Button from "./button";
 import PlayPauseButton from "./playPauseButton";
+import TimeTrackProgress from "./TimeTrackProgress";
 
 let audio: HTMLAudioElement;
 
@@ -78,7 +79,7 @@ const Player = () => {
                     <b>{active?.title || 'no track have choosen'}</b>
                     <i>{active?.artist}</i>
                 </div>
-                <TrackProgress width={75} left={currentTime} right={duration} onChange={changeCurrentTime}/>
+                <TimeTrackProgress width={75} left={currentTime} right={duration} onChange={changeCurrentTime}/>
             </div>
 
             <div className={styles.track_line}>
