@@ -40,7 +40,7 @@ const Player = () => {
     const {pauseTrack, playTrack, setTrackVolume, setTrackDuration, setTrackCurrentTime} = useActions()
     const setAudio = () => {
         if (active) {
-            audio.src = active.audio
+            audio.src = 'http://localhost:5000/'+active.audio
             audio.onloadedmetadata = () => {
                 setTrackDuration(Math.ceil(audio.duration))
                 play()
@@ -73,7 +73,7 @@ const Player = () => {
         <div className={styles.player}>
 
             <PlayPauseButton play={play}/>
-            <img className={styles.track_image} width={45} height={45} src={active?.picture}/>
+            <img className={styles.track_image} width={45} height={45} src={'http://localhost:5000/'+active?.picture}/>
             <div className={styles.track_line} style={{width: '68%', marginLeft: 10}}>
                 <div className={styles.track_title}>
                     <b>{active?.title || 'no track have choosen'}</b>
