@@ -6,6 +6,7 @@ import Button from "../../components/button";
 import TrackShowPage from "../../components/TrackShowPage";
 import axios from "axios";
 import {GetServerSideProps} from "next";
+import {siteSrc} from "../../public/site-src";
 
 const TrackPage = ({serverTrack}) => {
     const [track,setTrack] = useState(serverTrack)
@@ -20,7 +21,7 @@ const TrackPage = ({serverTrack}) => {
 export default TrackPage;
 
 export const getServerSideProps: GetServerSideProps = async ({params})=>{
-    const response = await axios.get('http://localhost:5000/tracks/' +params.id)
+    const response = await axios.get(siteSrc +params.id)
     return {
         props:{
             serverTrack:response.data

@@ -8,6 +8,7 @@ import styles from '../styles/trackItem.module.scss';
 import Button from "./button";
 import PlayPauseButton from "./playPauseButton";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {siteSrc} from "../public/site-src";
 
 interface TrackItemProps {
     track: ITrack
@@ -36,8 +37,8 @@ const TrackItem: React.FC<TrackItemProps> = ({track}) => {
             <div className={styles.track_item}>
                 <PlayPauseButton paused={(active?._id === track?._id) ? paused : true} play={play}/>
                 <img className={styles.track_image} width={45} height={45}
-                     src={'http://localhost:5000/' + track.picture}/>
-                <audio src={'http://localhost:5000/' + track.audio}>mlem</audio>
+                     src={siteSrc + track.picture}/>
+                <audio src={siteSrc + track.audio}>mlem</audio>
                 <div className={styles.track_title}>
                     <b>{track.title} </b>
                     <i>{track.artist}</i>

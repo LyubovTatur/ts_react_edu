@@ -1,0 +1,1 @@
+export const siteSrc = 'https://nest-server-for-ts-react-edu.herokuapp.com/'

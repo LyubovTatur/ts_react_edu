@@ -9,6 +9,7 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import Input from "./Input";
 import TrackImageBig from "./TrackImageBig";
+import {siteSrc} from "../public/site-src";
 
 
 const StepWrapper = () => {
@@ -30,7 +31,7 @@ const StepWrapper = () => {
         formData.append('lyrics',lyrics.value)
         formData.append('audio',audio)
         formData.append('picture',picture)
-        axios.post('http://localhost:5000/tracks', formData)
+        axios.post(siteSrc+'tracks', formData)
             .then(resp=>router.push('/tracks'))
             .catch(e=>console.log(e))
     };

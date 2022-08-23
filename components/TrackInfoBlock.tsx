@@ -2,6 +2,7 @@ import React from 'react';
 import {ITrack} from "../types/track";
 import styles from '../styles/track_info_block.module.scss'
 import TrackImageBig from "./TrackImageBig";
+import {siteSrc} from "../public/site-src";
 
 interface TrackInfoBlockProps {
     track: ITrack
@@ -18,7 +19,7 @@ const TrackInfoBlock:React.FC<TrackInfoBlockProps> = ({track}) => {
                     </div>
                     <div className={styles.lyrics}>{track.lyrics}</div>
                 </div>
-                <TrackImageBig picture={"http://localhost:5000/"+track.picture}/>
+                <TrackImageBig picture={siteSrc+track.picture}/>
             </div>
             <div className={styles.track_info_block} style={{justifyContent: 'center'}}>
                 <h1 className={styles.track_info} style={{textAlign: 'center', fontSize: 40}}>Comments</h1>

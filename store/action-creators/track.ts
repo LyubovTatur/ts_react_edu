@@ -1,11 +1,12 @@
 import {Dispatch} from "react";
 import {TrackAction, TrackActionTypes} from "../../types/track";
 import axios from "axios";
+import {siteSrc} from "../../public/site-src";
 
 export const fetchTracks = () =>{
     return async (dispatch: Dispatch<TrackAction>) => {
         try {
-            const response = await axios.get('http://localhost:5000/tracks')
+            const response = await axios.get(siteSrc+'tracks')
             dispatch({type:TrackActionTypes.FETCH_TRACKS, payload:response.data})
         }
         catch (e){
