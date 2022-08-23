@@ -2,8 +2,13 @@ import React from 'react';
 import Button from "./button";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 
-const PlayPauseButton = ({play}) => {
-    const {paused, active, volume, duration, currentTime} = useTypedSelector(state => state.player)
+interface PlayPauseButtonProps {
+    paused:boolean,
+    play:any
+}
+
+const PlayPauseButton:React.FC<PlayPauseButtonProps> = ({paused, play}) => {
+    // const {paused, active, volume, duration, currentTime} = useTypedSelector(state => state.player)
 
     return (
         <Button onClick={play}>

@@ -1,6 +1,14 @@
-.kuromi {
+.kuromi_left {
   position: absolute;
-  display: none;
+  display: block;
   top:-20px;
   left: 5%;
+
+}
+.kuromi_right {
+  position: absolute;
+  display: block;
+  top:-20px;
+  right: 5%;
+
 }

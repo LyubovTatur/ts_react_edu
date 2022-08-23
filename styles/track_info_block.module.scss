@@ -1,0 +1,50 @@
+.track_info_block {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+
+  .track_info {
+    font-size: 50px;
+    text-shadow: 3px 3px #4b1aa1;
+    font-weight: 600;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #4b1aa1;
+  }
+
+  .lyrics {
+    font-size: 16px;
+    color: #66551c;
+
+
+  }
+
+
+}
+
+.comment_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 6px;
+
+  .comment {
+    width: 100%;
+    padding: 10px;
+    margin-block: 6px;
+    font-weight: 600;
+    color: #4b1aa1;
+    border: 1px solid #66551c;
+    border-radius: 30px;
+    i{
+      color: #66551c;
+    }
+  }
+}
+
+.back_btn {
+  font-size: 20px;
+  padding: 10px
+}

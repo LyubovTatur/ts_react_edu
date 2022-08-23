@@ -16,10 +16,13 @@ const Kuromi = () => {
     }
 
     return (
+        <>
+            <img className={styles.kuromi_left}  width={200} height={200} src={kuromiSrc.src} alt="no pic"
+                 onMouseEnter={() => toggleKuromi()} onMouseLeave={() => toggleKuromi()} id='kuromi'/>
 
-        <img className={styles.kuromi} width={200} height={200} src={kuromiSrc.src} alt="no pic"
-               onMouseEnter={() => toggleKuromi()} onMouseLeave={() => toggleKuromi()} id='kuromi'/>
-
+            <img className={styles.kuromi_right}  width={200} height={200} src={kuromiSrc.src} alt="no pic"
+                 onMouseEnter={() => toggleKuromi()} onMouseLeave={() => toggleKuromi()} id='kuromi'/>
+        </>
 
     );
 };

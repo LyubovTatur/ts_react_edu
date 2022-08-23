@@ -15,7 +15,7 @@ const TimeTrackProgress:React.FC<TrackProgressProps> = ({left, right, onChange, 
         <div className={styles.track_progress}>
             <input style={{width:width+'%'}} className={styles.input} id="range" type="range" onChange={onChange} min={0} max={right}
                    value={left}/>
-            <div style={{fontSize:13}}>{Math.floor(left/60)}.{left%60<10?'0'+left%60:left%60} / {right/60}</div>
+            <div style={{fontSize:13}}>{Math.floor(left/60)}.{left%60<10?'0'+left%60:left%60} / {Math.floor(right/60)}.{right%60<10?'0'+right%60:right%60}</div>
         </div>
     );
 };

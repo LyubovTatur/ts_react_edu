@@ -7,6 +7,8 @@ import TrackInfoBlock from "./TrackInfoBlock";
 import Button from "./button";
 import axios from "axios";
 import {useRouter} from "next/router";
+import Input from "./Input";
+import TrackImageBig from "./TrackImageBig";
 
 
 const StepWrapper = () => {
@@ -34,10 +36,10 @@ const StepWrapper = () => {
     };
     const steps = [(
         <h2>
-            track info
-            <input {...title} type="text" placeholder='title'/>
-            <input {...artist} type="text" placeholder='artist'/>
-            <input {...lyrics} type="text" placeholder='lyrics'/>
+            Enter track info
+            <Input {...title} type="text" placeholder='title'/>
+            <Input {...artist} type="text" placeholder='artist'/>
+            <Input {...lyrics} type="text" placeholder='lyrics' />
         </h2>), (
         <h2>
             Picture Uploading
@@ -45,7 +47,8 @@ const StepWrapper = () => {
                 setFile={setPicture}
                 accept={'image/*'}
             >
-                <button>Upload pic</button>
+                <div><Button> Upload pic</Button></div>
+                {picture?  <div><TrackImageBig picture={URL.createObjectURL(picture)}/></div>:''}
             </FileUploader>
         </h2>), (
         <h2>
@@ -54,7 +57,10 @@ const StepWrapper = () => {
                 setFile={setAudio}
                 accept={'audio/*'}
             >
-                <button>Upload audio</button>
+                <div><Button> Upload audio</Button></div>
+                {picture?  <div>
+                    <audio src=""></audio></div>:''}
+
             </FileUploader>
         </h2>
     ), (
@@ -75,7 +81,7 @@ const StepWrapper = () => {
         </div>
     )]
     return (
-        <div>
+        <div style={{margin:'auto', textAlign:'center'}}>
             {steps[activeStep]}
             <button disabled={activeStep === 0} onClick={() => setActiveStep(prevState => prevState - 1)}>prev</button>
             <button disabled={activeStep === steps.length - 1}

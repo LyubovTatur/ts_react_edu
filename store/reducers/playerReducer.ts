@@ -20,7 +20,7 @@ export const playerReducer = (state = initialState, action: PlayerAction): Playe
             return {...state, paused: true}
 
         case PlayerActionTypes.SET_ACTIVE:
-            return {...state, active: action.payload, currentTime:0, duration:0}
+            return {...state,paused: true, active: action.payload, currentTime:0, duration:0}
 
         case PlayerActionTypes.SET_DURATION:
             return {...state, duration: action.payload}

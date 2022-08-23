@@ -12,7 +12,8 @@ const Header = () => {
     return (
         <header className={styles.header}>
 
-            <Kuromi/>
+            {/*<Kuromi/>*/}
+
             <Player/>
             <Navbar/>
              
