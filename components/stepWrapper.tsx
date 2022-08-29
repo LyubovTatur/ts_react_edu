@@ -11,8 +11,10 @@ import Input from "./Input";
 import TrackImageBig from "./TrackImageBig";
 import {siteSrc} from "../public/site-src";
 
-
-const StepWrapper = () => {
+interface StepWrapperProps{
+    trackSaveRequest:any
+}
+const StepWrapper:React.FC<StepWrapperProps> = ({trackSaveRequest}) => {
     const [isInputsFull, setIsInputsFull] = useState(false)
     const [activeStep, setActiveStep] = useState(0)
     const [picture, setPicture] = useState(null);
@@ -25,15 +27,22 @@ const StepWrapper = () => {
         console.log(picture)
     }, picture)
     const uploadTrack = () => {
-        const formData = new FormData()
-        formData.append('title',title.value)
-        formData.append('artist',artist.value)
-        formData.append('lyrics',lyrics.value)
-        formData.append('audio',audio)
-        formData.append('picture',picture)
-        axios.post(siteSrc+'tracks', formData)
-            .then(resp=>router.push('/tracks'))
-            .catch(e=>console.log(e))
+        trackSaveRequest({
+            title:title.value,
+            artist:artist.value,
+            lyrics:lyrics.value,
+            audio,
+            picture,
+        })
+        // const formData = new FormData()
+        // formData.append('title',title.value)
+        // formData.append('artist',artist.value)
+        // formData.append('lyrics',lyrics.value)
+        // formData.append('audio',audio)
+        // formData.append('picture',picture)
+        // axios.post(siteSrc+'tracks', formData)
+        //     .then(resp=>router.push('/tracks'))
+        //     .catch(e=>console.log(e))
     };
     const steps = [(
         <h2>

@@ -29,6 +29,8 @@ const Player = () => {
     //     picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
     // };
     const {paused, active, volume, duration, currentTime} = useTypedSelector(state => state.player)
+    useEffect(()=>console.log('Player: i was created'),[])
+
     useEffect(() => {
         if (!audio) {
             audio = new Audio()

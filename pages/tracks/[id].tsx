@@ -1,5 +1,5 @@
 // @ts-ignore
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MainLayout from "../../components/MainLayout";
 import {useRouter} from "next/router";
 import Button from "../../components/button";
@@ -21,7 +21,7 @@ const TrackPage = ({serverTrack}) => {
 export default TrackPage;
 
 export const getServerSideProps: GetServerSideProps = async ({params})=>{
-    const response = await axios.get(siteSrc +params.id)
+    const response = await axios.get(siteSrc+'tracks/' +params.id)
     return {
         props:{
             serverTrack:response.data

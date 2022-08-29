@@ -20,6 +20,7 @@ const TrackItem: React.FC<TrackItemProps> = ({track}) => {
     const {active, paused} = useTypedSelector(state => state.player)
     const {setTrack, playTrack, pauseTrack} = useActions()
     const play = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log('play in TrackItem')
         e.stopPropagation()
         if (active?._id !== track?._id) {
             setTrack(track)
