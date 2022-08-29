@@ -1,5 +1,4 @@
 import {ITrack} from "./track";
-import exp = require("constants");
 
 export interface PlayerState {
     active: null | ITrack;
