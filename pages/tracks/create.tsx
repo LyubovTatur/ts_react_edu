@@ -21,7 +21,6 @@ const Create = () => {
     };
     return (
         <MainLayout>
-            Track Uploader
             <StepWrapper trackSaveRequest={uploadTrack}/>
         </MainLayout>
     );

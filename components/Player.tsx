@@ -29,7 +29,7 @@ const Player = () => {
     //     picture: 'http://localhost:5000/image/ea290e0b-f955-4bb0-a507-5ec129ff03f5.jpg'
     // };
     const {paused, active, volume, duration, currentTime} = useTypedSelector(state => state.player)
-    useEffect(()=>console.log('Player: i was created'),[])
+    useEffect(() => console.log('Player: i was created'), [])
 
     useEffect(() => {
         if (!audio) {
@@ -90,24 +90,26 @@ const Player = () => {
 
     return (
         <div className={styles.player}>
-
             <PlayPauseButton paused={paused} play={play}/>
-            <img className={styles.track_image} width={45} height={45}
-                 src={siteSrc + active?.picture}/>
-            <div className={styles.track_line} style={{width: '68%', marginLeft: 10}}>
-                <div className={styles.track_title}>
-                    <b>{active?.title || 'no track have choosen'}</b>
-                    <i>{active?.artist}</i>
+            {active ? <>
+                <img className={styles.track_image} width={45} height={45}
+                     src={siteSrc + active?.picture}/>
+                <div className={styles.track_line} style={{width: '68%', marginLeft: 10}}>
+                    <div className={styles.track_title}>
+                        <b>{active?.title || 'no track have choosen'}</b>
+                        <i>{active?.artist}</i>
+                    </div>
+                    <TimeTrackProgress width={75} left={currentTime} right={duration} onChange={changeCurrentTime}/>
                 </div>
-                <TimeTrackProgress width={75} left={currentTime} right={duration} onChange={changeCurrentTime}/>
-            </div>
 
-            <div className={styles.track_line}>
-                <div className={styles.track_title}>
-                    <i>volume</i>
+                <div className={styles.track_line}>
+                    <div className={styles.track_title}>
+                        <i>volume</i>
+                    </div>
+                    <TrackProgress width={60} left={volume} right={100} onChange={changeVolume}/>
                 </div>
-                <TrackProgress width={60} left={volume} right={100} onChange={changeVolume}/>
-            </div>
+            </> : ''}
+
 
         </div>
     );
