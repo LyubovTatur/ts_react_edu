@@ -24,7 +24,8 @@ const TrackItem: React.FC<TrackItemProps> = ({track, deleteFromList}) => {
     const {setTrack, playTrack, pauseTrack} = useActions()
     const deleteTrack = (e) => {
         e.stopPropagation()
-        if (confirm(`Are you sure you want to delete "${track.title} - ${track.artist}"?`)){
+        const confirmToDelete =  window.confirm(`Are you sure you want to delete "${track.title} - ${track.artist}"?`)
+        if (confirmToDelete){
 
             axios.delete(siteSrc+'tracks/'+ track._id)
             deleteFromList()
